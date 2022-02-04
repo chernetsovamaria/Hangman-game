@@ -1,5 +1,5 @@
 def user_input():
-    return input('Введите букву: ')
+    return input('Введите букву: ').lower()
 
 
 def welcome_speech(t, lives):
@@ -25,7 +25,7 @@ def get_word(w):
 
 def build_template(t, w, g):
     l_template = list(t)
-    if g.lower() in w:
+    if g in w:
         l_template[w.index(g)] = g
     else:
         l_template = t
